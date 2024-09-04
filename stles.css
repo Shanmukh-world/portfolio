@@ -1,0 +1,296 @@
+/* Define the color palette */
+:root {
+    --primary-color: #0d6efd;       /* Bootstrap primary color (blue) */
+    --secondary-color: #6c757d;     /* Bootstrap secondary color (gray) */
+    --background-color: #f8f9fa;    /* Bootstrap light background */
+    --text-color: #212529;          /* Bootstrap dark text color */
+    --header-bg-color: #343a40;     /* Bootstrap dark color (navbar background) */
+    --card-bg-color: #ffffff;       /* White for cards */
+    --accent-color: #ffc107;        /* Bootstrap warning color (yellow) for accents */
+    --font-primary: 'Roboto', sans-serif; /* Primary font */
+    --font-header: 'Source Sans Pro', sans-serif; /* Header font for name */
+}
+
+/* Apply fonts */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px; /* Added padding for smaller screens */
+    position: relative; /* Added relative positioning for the popup */
+}
+
+header h1 {
+    font-family: var(--font-header); /* Applying custom font for the name */
+    font-size: 2.5rem; /* Adjusted font size for better scaling */
+    margin-bottom: 0.5rem;
+    position: relative; /* Added relative positioning for the popup */
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Popup (Tooltip) for the name */
+.header-popup {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 110%; /* Positioned to the right of the name */
+    transform: translateY(-50%);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Show popup on hover */
+header h1:hover + .header-popup {
+    display: block;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--header-bg-color); /* Ensure the background color is applied */
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color); /* Highlight color for the active link */
+}
+
+/* Add padding to the top of the body content to prevent it from being hidden behind the fixed navbar */
+body {
+    padding-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2rem; /* Adjusted font size for better scaling */
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Added gap between cards */
+    padding: 20px;
+}
+
+#projects .card {
+    background-color: var(--card-bg-color);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Fixed card width for consistency */
+    margin: 20px 0;
+}
+
+#projects .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Experience Section */
+#experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Added gap between boxes */
+    padding: 20px;
+}
+
+.experience-box {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 350px; /* Fixed box width for consistency */
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-box h4 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience-box p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.experience-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience-box ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Skills Section */
+.certifications {
+    text-align: center;
+}
+
+.certification-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.certification-name {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.certification-preview {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.certification-preview img {
+    max-width: 200px; /* Adjust the size as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.certification-item:hover .certification-preview {
+    display: block;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 20px;
+}
+
+#contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social Media Icons in Footer */
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+    
+    #projects .card, .experience-box {
+        width: 100%; /* Make cards and boxes full width on smaller screens */
+    }
+
+    /* Adjust navbar to stack vertically on small screens */
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shanmukha Vutikuri - A professional portfolio showcasing skills, projects, and experience in Electronics and Communication Engineering and AWS cloud technology.">
+    <meta name="keywords" content="Shanmukha Vutikuri, Portfolio, Electronics, Communication, Engineering, AWS, Cloud, Projects, Experience">
+    <meta name="author" content="Shanmukha Vutikuri">
+    <title>Shanmukha Vutikuri - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Smooth Scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Always visible navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030; /* Bootstrap's z-index for navbar */
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+        }
+
+        /* Profile Photo Hover Effect */
+        .profile-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-photo {
+            position: absolute;
+            top: 50%;
+            left: -220px; /* Adjust the distance to the left of the name */
+            transform: translateY(-50%);
+            display: none;
+            z-index: 10;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .profile-container:hover .profile-photo {
+            display: block;
+        }
+
+        .profile-photo img {
+            max-width: 200px; /* Adjust the size as needed */
+        }
+
+        /* Certification hover effect */
+        .certifications {
+            text-align: center;
+        }
+
+        .certification-item {
+            position: relative;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .certification-name {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .certification-preview {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            z-index: 10;
+            margin-top: 10px;
+        }
+
+        .certification-preview img {
+            max-width: 200px; /* Adjust the size as needed */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .certification-item:hover .certification-preview {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Shanmukha Vutikuri</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <div class="profile-container">
+                <h1 class="display-4">Shanmukha Vutikuri</h1>
+                <div class="profile-photo">
+                    <img src="shanmukh.jpeg" alt="Shanmukha Vutikuri">
+                </div>
+                <p class="lead">Motivated and results-driven professional with a strong commitment to continuous learning and skill enhancement.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <p class="text-center">Bachelor of Technology (B.Tech) in Electronics and Communication Engineering from Aditya Engineering College, Surampalem, Andhra Pradesh.</p>
+            <p class="text-center">Current CGPA: 7.1</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Portfolio Website</h5>
+                            <p class="card-text">Developed a personal portfolio website to showcase my work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Attendance Reporting System</h5>
+                            <p class="card-text">Designed and implemented an attendance reporting system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Visitor Counter using IoT</h5>
+                            <p class="card-text">Created a visitor counter utilizing IoT modules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Experience</h2>
+            <div class="row">
+                <!-- First Internship -->
+                <div class="col-md-6">
+                    <div class="experience-box shadow-sm p-4 mb-4">
+                        <h4>BSNL Telephone Exchange</h4>
+                        <p><strong>Location:</strong> Bhimavaram, Andhra Pradesh</p>
+                        <p><strong>Duration:</strong> 06/2023 – 07/2023</p>
+                        <ul>
+                            <li>Gained hands-on experience in telecommunications and networking.</li>
+                            <li>Assisted in maintaining and troubleshooting telephone exchange systems.</li>
+                            <li>Collaborated with senior engineers to optimize network performance.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Second Internship -->
+                <div class="col-md-6">
+                    <div class="experience-box shadow-sm p-4 mb-4">
+                        <h4>AWS Intern</h4>
+                        <p><strong>Company:</strong> BRAIN O VISION</p>
+                        <p><strong>Duration:</strong> 06/2024 – 08/2024</p>
+                        <ul>
+                            <li>Worked on deploying and managing cloud infrastructure using AWS services.</li>
+                            <li>Gained hands-on experience with services like EC2, S3, RDS, and Lambda.</li>
+                            <li>Assisted in optimizing cloud resources to improve cost-efficiency.</li>
+                            <li>Collaborated with the team to implement best practices in cloud security.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Skills & Certifications</h2>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <h3>Technical Skills</h3>
+                    <p>Python, C, C++, HTML, CSS, SQL, AWS</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Soft Skills</h3>
+                    <p>Problem-solving, Communication, Teamwork, Presentation Skills</p>
+                </div>
+            </div>
+            <h3 class="text-center mt-4">Certifications:</h3>
+            <div class="certifications">
+                <div class="certification-item">
+                    <a href="#" class="certification-name">AWS Certified Cloud Practitioner</a>
+                    <div class="certification-preview">
+                        <img src="AWS.jpg" alt="AWS Certified Cloud Practitioner">
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <a href="#" class="certification-name">Oracle Certified Foundations Associate</a>
+                    <div class="certification-preview">
+                        <img src="Oracle.jpg" alt="Oracle Certified Foundations Associate">
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <a href="#" class="certification-name">Linux Certified</a>
+                    <div class="certification-preview">
+                        <img src="Linux.jpg" alt="Linux Certified">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">Mobile: 8978467769</p>
+            <p class="text-center">Email: <a href="mailto:Vutikurishanmukh17@gmail.com">Vutikurishanmukh17@gmail.com</a></p>
+            <p class="text-center">LinkedIn: <a href="https://www.linkedin.com/in/shanmukh-vutikuri-158a6a1a0">www.linkedin.com/in/shanmukh-vutikuri-158a6a1a0</a></p>
+            <p class="text-center">Location: Rajahmundry, Andhra Pradesh</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Shanmukha Vutikuri. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
